@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+        <fieldset>
+                <field
+                        name="task_id"
+                        type="hidden"
+                />
+                <field
+                        name="title"
+                        type="text"
+                        label="TASKMAN_TASK_TITLE"
+                        description="TASKMAN_TASK_TITLE"
+                        size="40"
+                        class="inputbox"
+                        default=""
+                        required="true"
+                />
+                <field
+                        name="notes"
+                        type="editor"
+                        label="TASKMAN_TASK_NOTES"
+                        description="TASKMAN_TASK_NOTES"
+                        column="100"
+                        width="500"
+                        buttons="image,article,pagebreak,readmore"
+                        row="10"
+                        
+                />
+                <field
+                        name="company"
+                        type="company"
+                        label="TASKMAN_TASK_COMPANY"
+                        description="TASKMAN_TASK_COMPANY"
+                        required="true"
+                />
+                
+                <field
+                        name="assignee"
+                        type="list"
+                        label="TASKMAN_TASK_ASSIGNEE"
+                        description="TASKMAN_TASK_ASIGN"
+                        required="true"
+                        
+                >	
+                <option value="Ganesh">GaneshKumar</option>
+                <option value="Sanjeev">Sanjeev</option>
+                </field>
+                
+                <field
+                        name="projects"
+                        type="project"
+                        label="TASKMAN_TASK_PROJECT"
+                        description="TASKMAN_TASK_PROJECT"
+                />
+                <field
+                        name="subtask"
+                        type="text"
+                        label="TASKMAN_TASK_SUBTASK"
+                        description="TASKMAN_TASK_SUBTASK"
+                        size="40"
+                        class="inputbox"
+                        default=""
+                        
+                />
+                <field
+                        name="duedate"
+                        type="calendar"
+                        label="TASKMAN_TASK_DDATE"
+                        description="TASKMAN_TASK_DDATE"
+                        disable="true"
+                        format="%Y-%m-%d"
+                        required="true"
+                />
+                
+                <field
+					name="tags"
+					type="text"
+					label="TASKMAN_TASK_TAGS"
+                    description="TASKMAN_TASK_TAGS"
+                    size="40"
+                    class="inputbox"
+                    default=""
+				/>
+				<field
+					name="file"
+					type="text"
+					label="TASKMAN_TASK_FILE"
+                    description="TASKMAN_TASK_FILE"
+                    size="40"
+                        class="inputbox"
+                        default=""
+				/>
+				<field
+					name="follower"
+					type="list"
+					label="TASKMAN_TASK_FOLLOWER"
+                    description="TASKMAN_TASK_FOLLOWER"
+                >
+					<option value="Bala">Bala</option>
+					<option value="Yuvaraj">Yuvaraj</option>
+				</field>
+				<field
+					name="label"
+					type="label"
+					label="TASKMAN_TASK_LABEL"
+                    description="TASKMAN_TASK_LABEL"
+                />
+				<field
+					name="feed"
+					type="text"
+					label="TASKMAN_TASK_FEED"
+                    description="TASKMAN_TASK_FEED"
+                    size="40"
+                    class="inputbox"
+                    default=""
+				/>
+				<field
+					name="comments"
+					type="text"
+					label="TASKMAN_TASK_COMMENT"
+                    description="TASKMAN_TASK_COMMENT"
+                    size="40"
+                    class="inputbox"
+                    default=""
+				/>
+				<field
+					name="create_by"
+					type="text"
+					label="TASKMAN_TASK_CREATE"
+                    description="TASKMAN_TASK_CREATE"
+                    size="40"
+                    class="inputbox"
+                    default=""
+				/>
+				<field
+					name="task_status"
+					type="text"
+					label="TASKMAN_TASK_STATUS"
+                    description="TASKMAN_TASK_STATUS"
+                    size="40"
+                    class="inputbox"
+                    default=""
+				/>
+				<field
+					name="priority"
+					type="text"
+					label="TASKMAN_TASK_PRIORITY"
+                    description="TASKMAN_TASK_PRIORITY"
+                    size="40"
+                    class="inputbox"
+                    default=""
+				/>
+				<field
+					name="state"
+					type="list"
+					label="TASKMAN_TASK_STATE"
+                    description="TASKMAN_TASK_STATE"
+                >
+					<option value="1">Publish</option>
+					<option value="0">Unpublish</option>
+				</field>		
+				
+				
+        </fieldset>
+</form>

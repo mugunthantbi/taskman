@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+        <fieldset>
+                <field
+                        name="project_id"
+                        type="hidden"
+                />
+                <field
+                        name="proj_name"
+                        type="text"
+                        label="HELLOWORLD_TASK_TITLE"
+                        description="HELLOWORLD_TASK_TITLE"
+                        size="40"
+                        class="inputbox"
+                        default=""
+                        required="true"
+                />
+                <field
+                        name="proj_members"
+                        type="text"
+                        label="HELLOWORLD_TASK_TITLE"
+                        description="HELLOWORLD_TASK_TITLE"
+                        size="40"
+                        class="inputbox"
+                        default=""
+                        required="true"
+                />
+                
+                
+				<field
+					name="state"
+					type="list"
+					label="HELLOWORLD_MSGS_PUBLISH"
+                    description="HELLOWORLD_MSGS_PUBLISH"
+                >
+					<option value="1">Publish</option>
+					<option value="0">Unpublish</option>
+				</field>		
+				
+				
+        </fieldset>
+</form>

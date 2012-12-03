@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+        <layout title="COM_HELLOWORLD1_MESSAGE">
+                <message>
+                        <![CDATA[COM_HELLOWORLD1_MESSAGE_DIS]]>
+                </message>
+        </layout>
+        <fields
+                name="request"
+                addfieldpath="/administrator/components/com_helloworld1/models/fields"
+        >
+                <fieldset name="request">
+                        <field
+                                name="id"
+                                type="hello"
+                                label="COM_HELLOWORLD_HELLOWORLD_FIELD_GREETING_LABEL"
+                                description="COM_HELLOWORLD_HELLOWORLD_FIELD_GREETING_DESC"
+                                >
+                        </field>
+                        
+                        <field
+                                name="name"
+                                type="list"
+                                label="COM_HELLOWORLD_HELLOWORLD_FIELD_GREETING_LABEL"
+                                description="COM_HELLOWORLD_HELLOWORLD_FIELD_GREETING_DESC"
+                        >
+                        <option value="bala">Bala</option>
+                        <option value="mugunthan">Mugunthan</option>
+                        </field>
+
+                </fieldset>
+        </fields>
+</metadata>
