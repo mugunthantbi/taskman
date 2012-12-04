@@ -1,32 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <metadata>
-        <layout title="COM_HELLOWORLD1_MESSAGE">
+        <layout title="COM_TASKMAN_TASK">
                 <message>
-                        <![CDATA[COM_HELLOWORLD1_MESSAGE_DIS]]>
+                        <![CDATA[COM_TASKMAN_TASK_DETAILS]]>
                 </message>
         </layout>
         <fields
                 name="request"
-                addfieldpath="/administrator/components/com_helloworld1/models/fields"
+                addfieldpath="/components/com_taskman/models/fields"
         >
                 <fieldset name="request">
                         <field
-                                name="id"
-                                type="hello"
-                                label="COM_HELLOWORLD_HELLOWORLD_FIELD_GREETING_LABEL"
-                                description="COM_HELLOWORLD_HELLOWORLD_FIELD_GREETING_DESC"
+                                name="task_id"
+                                type="task"
+                                label="COM_TASKMAN_TASK_ID"
+                                description="COM_TASKMAN_TASK_ID"
                                 >
                         </field>
                         
-                        <field
-                                name="name"
-                                type="list"
-                                label="COM_HELLOWORLD_HELLOWORLD_FIELD_GREETING_LABEL"
-                                description="COM_HELLOWORLD_HELLOWORLD_FIELD_GREETING_DESC"
-                        >
-                        <option value="bala">Bala</option>
-                        <option value="mugunthan">Mugunthan</option>
-                        </field>
+                        
 
                 </fieldset>
         </fields>

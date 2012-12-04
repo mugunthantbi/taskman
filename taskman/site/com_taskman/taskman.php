@@ -9,8 +9,7 @@ jimport('joomla.application.component.controller');
 $controller = JControllerLegacy::getInstance('TaskMan');
  
 // Perform the Request task
-$input = JFactory::getApplication()->input;
-$controller->execute($input->getCmd('task'));
+$controller->execute(JFactory::getApplication()->input->get('task'));
  
 // Redirect if set by the controller
 $controller->redirect();

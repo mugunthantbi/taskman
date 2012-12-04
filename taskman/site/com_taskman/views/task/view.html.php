@@ -6,18 +6,50 @@ defined('_JEXEC') or die('Restricted access');
 jimport('joomla.application.component.view');
  
 /**
- * HTML View class for the HelloWorld Component
+ * HelloWorld View
  */
 class TaskManViewTask extends JViewLegacy
 {
-        // Overwriting JView display method
-        function display($tpl = null) 
+        /**
+         * display method of Hello view
+         * @return void
+         */
+        public function display($tpl = null) 
         {
-                // Assign data to the view
-                $this->msg = $this->get('Array');
-                $this->msg1=$this->get('Object');
+                // get the Data
+                
+                $form = $this->get('Form');
+                $item = $this->get('Item');
  
-                // Display the view
+                // Check for errors.
+                if (count($errors = $this->get('Errors'))) 
+                {
+                        JError::raiseError(500, implode('<br />', $errors));
+                        return false;
+                }
+                // Assign the Data
+                $this->form = $form;
+                $this->item = $item;
+ 
+                // Set the toolbar
+                //$this->addToolBar();
+ 
+                // Display the template
                 parent::display($tpl);
+        }
+ 
+        /**
+         * Setting the toolbar
+         */
+        protected function addToolBar() 
+        {
+                $input = JFactory::getApplication()->input;
+                $input->set('hidemainmenu', true);
+                $isNew = ($this->item->task_id == 0);
+                JToolBarHelper::title($isNew ? JText::_('COM_TAKMAN_NEW')
+                                             : JText::_('COM_TAKMAN_EDIT'));
+                JToolBarHelper::save('task.save');
+                JToolBarHelper::cancel('task.cancel', $isNew ? 'JTOOLBAR_CANCEL'
+                                                                   : 'JTOOLBAR_CLOSE');
         }
 }

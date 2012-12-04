@@ -6,14 +6,21 @@ defined('_JEXEC') or die('Restricted access');
 jimport('joomla.application.component.controller');
  
 /**
- * Hello World Component Controller
+ * General Controller of HelloWorld component
  */
-class HelloWorld1Controller extends JControllerLegacy
+class TaskManController extends JControllerLegacy
 {
-	function display()
-	{
-		JRequest::setVar('view',JRequest::getCmd('view','task'));
-		parent::display();
-	}
-	
+        /**
+         * display task
+         *
+         * @return void
+         */
+        function display($cachable = false,$urlparams=false) 
+        {
+                // set default view if not set
+                JRequest::setVar('view', JRequest::getCmd('view', 'tasks'));
+ 
+                // call parent behavior
+                parent::display($cachable);
+        }
 }

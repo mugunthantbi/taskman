@@ -36,7 +36,7 @@ class JFormFieldTask extends JFormFieldList
                 {
                         foreach($messages as $message) 
                         {
-                                $options[] = JHtml::_('select.option', $message->id);
+                                $options[] = JHtml::_('select.option', $message->task_id,$message->title);
                         }
                 }
                 $options = array_merge(parent::getOptions(), $options);

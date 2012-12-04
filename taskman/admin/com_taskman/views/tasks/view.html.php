@@ -52,10 +52,19 @@ class TaskManViewTasks extends JViewLegacy
                 
                 JHtmlSidebar::setAction('index.php?option=com_taskman&view=tasks');
 
+				//State filter
 				JHtmlSidebar::addFilter(
 				JText::_('JOPTION_SELECT_PUBLISHED'),
 				'filter_state',
 				JHtml::_('select.options', JHtml::_('jgrid.publishedOptions'), 'value', 'text', $this->state->get('filter.state'), true)
+				);
+				
+				//company filter
+				$filter_company_options = $this->get('CompanyOptions');
+				JHtmlSidebar::addFilter(
+				JText::_('JOPTION_SELECT_PUBLISHED'),
+				'filter_company',
+				JHtml::_('select.options', $filter_company_options, 'value', 'text', $this->state->get('filter.company'), true)
 				);
 		
                 

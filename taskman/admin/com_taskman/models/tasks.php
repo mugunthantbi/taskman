@@ -21,6 +21,11 @@ class TaskManModelTasks extends JModelList
 			$published = $this->getUserStateFromRequest($this->context.'.filter.state', 'filter_state', '', 'string');
 			$this->setState('filter.state', $published);
 			
+			//comapny filter
+			$company = $this->getUserStateFromRequest($this->context.'.filter.company', 'filter_company', '', 'string');
+			$this->setState('filter.company', $company);
+				
+			
 			parent::populateState($ordering, $direction);
 
 		}
@@ -60,6 +65,13 @@ class TaskManModelTasks extends JModelList
 					}
 				}
 				
+				//Filter by company
+				$company = $this->getState('filter.company');
+				if (!empty($company)) {
+					$company = $db->Quote($db->escape($company));
+					$query->where('company = '. $company);
+				}
+				
 				
 				
 				// Join over the company.
@@ -75,5 +87,32 @@ class TaskManModelTasks extends JModelList
 				$query->join('LEFT', '#__taskman_label as l ON l.label_id = a.label');
 				
                 return $query;
+        }
+        
+        /*
+        * Function for get company name list
+        * for name filter
+        *
+        * */
+        function getCompanyOptions()
+        {
+        	//create new query
+        	$db=JFactory::getDBO();
+        	$query=$db->getQuery(true);
+        
+        	//select fields
+        	$query->select('DISTINCT company');
+        
+        	//select table
+        	$query->from('#__taskman_task');
+        
+        	$db->setQuery($query);
+        	$result=$db->loadObjectList();
+        	foreach($result as $item)
+        	{
+        		$name=$item->company;
+        		$filter_name_options[]=JHTML::_('select.option',$name,$name);
+        	}
+        	return $filter_name_options;
         }
 }

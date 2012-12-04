@@ -216,6 +216,7 @@ $saveOrder	= $listOrder == 'ordering';
 
         </tbody>
         </table>
+        </div>
         
         <div>
                 <input type="hidden" name="task" value="" />
