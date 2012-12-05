@@ -8,8 +8,8 @@
                 <field
                         name="proj_name"
                         type="text"
-                        label="HELLOWORLD_TASK_TITLE"
-                        description="HELLOWORLD_TASK_TITLE"
+                        label="COM_TASKMAN_PROJECT_NAME"
+                        description="COM_TASKMAN_PROJECT_NAME"
                         size="40"
                         class="inputbox"
                         default=""
@@ -18,8 +18,8 @@
                 <field
                         name="proj_members"
                         type="text"
-                        label="HELLOWORLD_TASK_TITLE"
-                        description="HELLOWORLD_TASK_TITLE"
+                        label="COM_TASKMAN_PROJECT_TITLE"
+                        description="COM_TASKMAN_PROJECT_TITLE"
                         size="40"
                         class="inputbox"
                         default=""
@@ -30,8 +30,8 @@
 				<field
 					name="state"
 					type="list"
-					label="HELLOWORLD_MSGS_PUBLISH"
-                    description="HELLOWORLD_MSGS_PUBLISH"
+					label="COM_TASKMAN_PROJECT_STATE"
+                    description="COM_TASKMAN_PROJECT_STATE"
                 >
 					<option value="1">Publish</option>
 					<option value="0">Unpublish</option>

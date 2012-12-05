@@ -134,6 +134,9 @@ $saveOrder	= $listOrder == 'ordering';
             	<?php echo JHtml::_('grid.sort', 'TASKMAN_TASK_PRIORITY', 'a.priority', $listDirn, $listOrder); ?>
                 
         </th>
+        <th>
+        	View
+        </th>
 </tr>
 
                 </thead>
@@ -210,6 +213,13 @@ $saveOrder	= $listOrder == 'ordering';
                 </td>
                 <td>
                         <?php echo $item->priority; ?>
+                </td>
+                <td>
+                <div class="blank">
+					<a rel="{handler: 'iframe', size: {x: 700, y: 450}}" 
+					href="index.php?option=com_taskman&view=task&task_id=<?php echo $item->task_id;?>&tmpl=component"
+					title="View the task details" class="modal btn">View</a>
+			</div>
                 </td>
         </tr>
 <?php endforeach; ?>

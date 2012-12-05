@@ -46,8 +46,8 @@ class TaskManViewLabel extends JViewLegacy
                 $input = JFactory::getApplication()->input;
                 $input->set('hidemainmenu', true);
                 $isNew = ($this->item->label_id == 0);
-                JToolBarHelper::title($isNew ? JText::_('COM_TAKMAN_MANAGER_HELLOWORLD_NEW')
-                                             : JText::_('COM_TAKMAN_MANAGER_HELLOWORLD_EDIT'));
+                JToolBarHelper::title($isNew ? JText::_('COM_TASKMAN_LABEL_NEW')
+                                             : JText::_('COM_TASKMAN_LABEL_EDIT'));
                 JToolBarHelper::save('label.save');
                 JToolBarHelper::cancel('label.cancel', $isNew ? 'JTOOLBAR_CANCEL'
                                                                    : 'JTOOLBAR_CLOSE');

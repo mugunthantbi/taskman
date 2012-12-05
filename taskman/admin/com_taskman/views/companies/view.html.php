@@ -41,7 +41,7 @@ class TaskManViewCompanies extends JViewLegacy
         }
         protected function addToolBar() 
         {
-                JToolBarHelper::title(JText::_('COM_HELLOWORLD_MANAGER_HELLOWORLDS'));
+                JToolBarHelper::title(JText::_('COM_TASKMAN_COMPANY'));
                 JToolBarHelper::addNew('company.add');
                 JToolBarHelper::editList('company.edit');
                 JToolBarHelper::deleteList('', 'companies.delete');

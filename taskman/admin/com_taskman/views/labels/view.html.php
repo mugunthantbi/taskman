@@ -41,7 +41,7 @@ class TaskManViewLabels extends JViewLegacy
         }
         protected function addToolBar() 
         {
-                JToolBarHelper::title(JText::_('COM_HELLOWORLD_MANAGER_HELLOWORLDS'));
+                JToolBarHelper::title(JText::_('COM_TASKMAN_LABEL'));
                 JToolBarHelper::addNew('label.add');
                 JToolBarHelper::editList('label.edit');
                 JToolBarHelper::deleteList('', 'labels.delete');

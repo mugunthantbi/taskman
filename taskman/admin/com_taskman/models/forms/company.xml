@@ -8,8 +8,8 @@
                 <field
                         name="company_name"
                         type="text"
-                        label="HELLOWORLD_TASK_TITLE"
-                        description="HELLOWORLD_TASK_TITLE"
+                        label="COM_TASKMAN_COMPANY_NAME"
+                        description="COM_TASKMAN_COMPANY_NAME"
                         size="40"
                         class="inputbox"
                         default=""
@@ -18,8 +18,8 @@
                 <field
                         name="members"
                         type="editor"
-                        label="HELLOWORLD_TASK_NOTES"
-                        description="HELLOWORLD_TASK_NOTES"
+                        label="COM_TASKMAN_COMPANY_MEMBERS"
+                        description="COM_TASKMAN_COMPANY_MEMBERS"
                         column="100"
                         width="500"
                         buttons="image,article,pagebreak,readmore"
@@ -29,8 +29,8 @@
                 <field
                         name="owner"
                         type="text"
-                        label="HELLOWORLD_TASK_TITLE"
-                        description="HELLOWORLD_TASK_TITLE"
+                        label="COM_TASKMAN_COMPANY_OWNER"
+                        description="COM_TASKMAN_COMPANY_OWNER"
                         size="40"
                         class="inputbox"
                         default=""
@@ -41,8 +41,8 @@
 				<field
 					name="state"
 					type="list"
-					label="HELLOWORLD_MSGS_PUBLISH"
-                    description="HELLOWORLD_MSGS_PUBLISH"
+					label="COM_TASKMAN_COMPANY_STATE"
+                    description="COM_TASKMAN_COMPANY_STATE"
                 >
 					<option value="1">Publish</option>
 					<option value="0">Unpublish</option>

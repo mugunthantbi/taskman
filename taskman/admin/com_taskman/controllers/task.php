@@ -34,10 +34,62 @@ class TaskManControllerTask extends JControllerForm
 			
 			
 	}
-	/*
-	function edit()
+	function saveDate()
 	{
-		echo "ffff";
-	}*/
+  		$post = JRequest::get('post');
+  			
+  		$model= $this->getModel();
+  	
+  		$row = $model->getTable();
+  		
+  		$row->load($post['task_id']);
+  
+	  	$row->duedate = $post['duedate'];
+
+	  	$row->store();
+  	
+	  	echo $post['duedate'];
+  		exit;
+  	}
+
 	
+	
+  	function saveAssign()
+  	{
+  		$post = JRequest::get('post');
+  		 
+  	
+  		$model= $this->getModel();
+  		 
+  		$row = $model->getTable();
+  	
+  		$row->load($post['task_id']);
+  	
+  		$row->assignee = $post['assignee'];
+  	
+  		$row->store();
+  		 
+  		echo $post['assignee'];
+  		exit;
+  	}
+  	function saveFollower()
+  	{
+  		$post = JRequest::get('post');
+  			
+  		 
+  		$model= $this->getModel();
+  			
+  		$row = $model->getTable();
+  		 
+  		$row->load($post['task_id']);
+  		 
+  		$row->followers = $post['followers'];
+  		 
+  		$row->store();
+  			
+  		echo $post['followers'];
+  		exit;
+  	}
+  	
+  	
 }

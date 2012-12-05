@@ -46,8 +46,8 @@ class TaskManViewProject extends JViewLegacy
                 $input = JFactory::getApplication()->input;
                 $input->set('hidemainmenu', true);
                 $isNew = ($this->item->project_id == 0);
-                JToolBarHelper::title($isNew ? JText::_('COM_TASKMAN_MANAGER_HELLOWORLD_NEW')
-                                             : JText::_('COM_TASKMAN_MANAGER_HELLOWORLD_EDIT'));
+                JToolBarHelper::title($isNew ? JText::_('COM_TASKMAN_PROJECT_NEW')
+                                             : JText::_('COM_TASKMAN_PROJECT_EDIT'));
                 JToolBarHelper::save('project.save');
                 JToolBarHelper::cancel('project.cancel', $isNew ? 'JTOOLBAR_CANCEL'
                                                                    : 'JTOOLBAR_CLOSE');

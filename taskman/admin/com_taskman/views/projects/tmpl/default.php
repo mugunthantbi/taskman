@@ -21,21 +21,21 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
         <tr>
         <th width="5">
 											<!-- arg1-text, arg2-db query name, arg3,4 ordering default values -->
-				<?php echo JHtml::_('grid.sort', 'HELLOWORLD_TASK_ID', 'p.project_id', $listDirn, $listOrder); ?>
+				<?php echo JHtml::_('grid.sort', 'COM_TASKMAN_PROJECT_ID', 'p.project_id', $listDirn, $listOrder); ?>
         </th>
         <th width="20">
                 <input type="checkbox" name="toggle" value="" onclick="Joomla.checkAll(this)" />
         </th>                   
         <th>
-             	<?php echo JHtml::_('grid.sort', 'HELLOWORLD_MSGS_PUBLISH', 'p.state', $listDirn, $listOrder); ?>
+             	<?php echo JHtml::_('grid.sort', 'COM_TASKMAN_PROJECT_STATE', 'p.state', $listDirn, $listOrder); ?>
         </th>
         <th>
-             	<?php echo JHtml::_('grid.sort', 'HELLOWORLD_TASK_TITLE', 'p.proj_name', $listDirn, $listOrder); ?>
+             	<?php echo JHtml::_('grid.sort', 'COM_TASKMAN_PROJECT_NAME', 'p.proj_name', $listDirn, $listOrder); ?>
         </th>
         
         
         <th>
-             	<?php echo JHtml::_('grid.sort', 'HELLOWORLD_TASK_NOTES', 'a.proj_members', $listDirn, $listOrder); ?>
+             	<?php echo JHtml::_('grid.sort', 'COM_TASKMAN_PROJECT_MEMBERS', 'a.proj_members', $listDirn, $listOrder); ?>
         </th>
         
 </tr>

@@ -46,8 +46,8 @@ class TaskManViewCompany extends JViewLegacy
                 $input = JFactory::getApplication()->input;
                 $input->set('hidemainmenu', true);
                 $isNew = ($this->item->company_id == 0);
-                JToolBarHelper::title($isNew ? JText::_('COM_TAKMAN_MANAGER_HELLOWORLD_NEW')
-                                             : JText::_('COM_TAKMAN_MANAGER_HELLOWORLD_EDIT'));
+                JToolBarHelper::title($isNew ? JText::_('COM_TASKMAN_COMPANY_NEW')
+                                             : JText::_('COM_TASKMAN_COMPANY_EDIT'));
                 JToolBarHelper::save('company.save');
                 JToolBarHelper::cancel('company.cancel', $isNew ? 'JTOOLBAR_CANCEL'
                                                                    : 'JTOOLBAR_CLOSE');
